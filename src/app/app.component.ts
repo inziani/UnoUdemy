@@ -6,6 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'unoUdemy';
-  serverElements = [{type: 'server', name: 'TestServer', content: 'Just a test'}];
+
+  serverElements = [{type: 'server', name: 'TestServer', content: 'Just a test Again..'}];
+
+  onServerAdded(serverData: {serverName: string, serverContent: string}){
+    this.serverElements.push({type: 'server', name: serverData.serverName, content: serverData.serverContent});
+  }
+
+  onBluePrintAdded(bluePrintData: {serverName: string, serverContent: string}){
+    this.serverElements.push({type: 'blueprint', name: bluePrintData.serverName, content: bluePrintData.serverContent});
+  }
 }
