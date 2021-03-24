@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h6><em>Property and event binding assignment</em></h6>
+      <br>
+      <button class="btn btn-outline-success" type="button" style="margin-right: 20px;" (click)="onStart()">Start</button>
+      <p>{{ counter }}</p>
+      <button class="btn btn-outline-danger" type="button">Stop</button>
+    </div>
+  </div>
+    <div>
+      <app-odd [counter]='counter'></app-odd>
+      <app-even [counter]='counter'></app-even>
+    </div>
+</div>
