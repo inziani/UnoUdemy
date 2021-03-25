@@ -1,6 +1,8 @@
 import { Time } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
+import { Task } from './task';
+
 @Component({
   selector: 'app-game-control',
   templateUrl: './game-control.component.html',
@@ -10,12 +12,15 @@ export class GameControlComponent implements OnInit {
 
   public counter: number;
   public timer!: ReturnType<typeof setTimeout>;
+  public task: Task;
+  public taskList = [{ taskId: 0, taskDesc: 'to do list', taskDetails: 'My first Angular app'}];
 
 
 
   constructor() {
     this.counter = 0;
-    // this.timer = 60 ;
+    this.task = new Task (0, '', '');
+
   }
 
   ngOnInit(): void {
@@ -29,6 +34,10 @@ export class GameControlComponent implements OnInit {
 
     this.timer = setInterval(this.addIng, 3000);
     // this.counter +=1
+  }
+
+  createTask(taskData:{taskId: number, taskDesc: string, taskDetails: string}){
+    this.taskList.push({taskId: taskData.taskId, taskDesc: taskData.taskDesc, taskDetails:taskData.taskDetails})
   }
 
 }

@@ -1,12 +1,30 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h6><em>Property and event binding assignment</em></h6>
       <br>
       <button class="btn btn-outline-success" type="button" style="margin-right: 20px;" (click)="onStart()">Start</button>
       <p>{{ counter }}</p>
       <button class="btn btn-outline-danger" type="button">Stop</button>
     </div>
+  </div>
+  <div>
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="taskId"> Task ID</label>
+            <input type="text" class="form-control" id="taskId">
+          </div>
+          <div class="form-group">
+            <label for="taskDesc">Task Description</label>
+            <input type="text" class="form-control" id="taskDesc">
+          </div>
+          <div class="form-group">
+            <label for="taskDetails">Task Details</label>
+            <textarea class="form-control" name="taskDetails" id="taskDetails" cols="30" rows="5"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Add Task</button>
+          </div>
+        </div>
   </div>
     <div>
       <app-odd [counter]='counter'></app-odd>
