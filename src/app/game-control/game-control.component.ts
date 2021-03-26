@@ -1,5 +1,5 @@
 import { Time } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 import { Task } from './task';
 
@@ -10,34 +10,45 @@ import { Task } from './task';
 })
 export class GameControlComponent implements OnInit {
 
+
   public counter: number;
   public timer!: ReturnType<typeof setTimeout>;
   public task: Task;
-  public taskList = [{ taskId: 0, taskDesc: 'to do list', taskDetails: 'My first Angular app'}];
+  public taskList = [{ taskId: '1', taskDesc: 'to do list', taskDetails: 'Angular Frontend'},
+{ taskId: '2', taskDesc: 'database', taskDetails: 'django backend'}];
 
 
 
   constructor() {
     this.counter = 0;
-    this.task = new Task (0, '', '');
+    this.task = new Task ('', '', '');
 
   }
 
   ngOnInit(): void {
+
   }
 
   addIng(){
-    this.counter +=1
+    this.counter +=1;
+
   }
 
-  onStart(){
+  displayList(){
+    return this.taskList
 
-    this.timer = setInterval(this.addIng, 3000);
-    // this.counter +=1
   }
 
-  createTask(taskData:{taskId: number, taskDesc: string, taskDetails: string}){
-    this.taskList.push({taskId: taskData.taskId, taskDesc: taskData.taskDesc, taskDetails:taskData.taskDetails})
+  // createTask(taskData:{taskId: number, taskDesc: string, taskDetails: string}){
+  //   this.taskList.push({taskId: taskData.taskId, taskDesc: taskData.taskDesc, taskDetails:taskData.taskDetails})
+  // }
+
+  // createTask(InputTask: HTMLInputElement){
+  //   this.taskList.push({taskId: InputTask.value, taskDesc: InputTask.value, taskDetails:InputTask.value})
+  // }
+
+  onClick(){
+     console.log('hey I am  clicked in child');
   }
 
 }

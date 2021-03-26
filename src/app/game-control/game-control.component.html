@@ -1,33 +1,47 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <br>
-      <button class="btn btn-outline-success" type="button" style="margin-right: 20px;" (click)="onStart()">Start</button>
-      <p>{{ counter }}</p>
-      <button class="btn btn-outline-danger" type="button">Stop</button>
-    </div>
+      <div>
+        <app-odd [counter]='counter'  ></app-odd>
+        <!-- *ngFor="let taskList of taskList" [task]='taskList' -->
+      </div>
+  <div class="container">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>Task Id</th>
+          <th>Task Description</th>
+          <th>Task Details</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of taskList">
+          <td>{{ task.taskId }}</td>
+          <td>{{ task.taskDesc }}</td>
+          <td>{{ task.taskDetails }}</td>
+          <td>
+            <div>
+              <!-- <label for="status" style="margin-right: 30px;">Status</label> -->
+              <select name="status" id="status" required>
+                <!-- <option value="created">Status</option> -->
+                <option value="created">Created</option>
+                <option value="wip">Work in Progress</option>
+                <option value="complete">Complete</option>
+                <option value="closed">Closed</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div>
-        <div class="col-xs-12">
-          <div class="form-group">
-            <label for="taskId"> Task ID</label>
-            <input type="text" class="form-control" id="taskId">
-          </div>
-          <div class="form-group">
-            <label for="taskDesc">Task Description</label>
-            <input type="text" class="form-control" id="taskDesc">
-          </div>
-          <div class="form-group">
-            <label for="taskDetails">Task Details</label>
-            <textarea class="form-control" name="taskDetails" id="taskDetails" cols="30" rows="5"></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Add Task</button>
-          </div>
-        </div>
-  </div>
-    <div>
-      <app-odd [counter]='counter'></app-odd>
-      <app-even [counter]='counter'></app-even>
+    <div class="row">
+      <div class="col-xs-12">
+        <br>
+        <button class="btn btn-outline-success" type="button" style="margin-right: 20px;" (click)="onClick()">Start</button>
+        <p>{{ counter }}</p>
+        <button class="btn btn-outline-danger" type="button">Stop</button>
+      </div>
     </div>
+    <div><app-even [counter]='counter'></app-even></div>
+
 </div>

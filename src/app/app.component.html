@@ -1,4 +1,7 @@
 <div class="container">
+    <div>
+      <app-game-control></app-game-control>
+    </div>
   <app-cockpit
   (serverCreated)="onServerAdded($event)"
   (bluePrintCreated)="onBluePrintAdded($event)"
@@ -10,8 +13,6 @@
     </div>
   </div>
   <hr>
-  <div>
-    <app-game-control></app-game-control>
-  </div>
+
 </div>
 

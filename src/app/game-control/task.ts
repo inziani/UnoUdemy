@@ -1,6 +1,6 @@
 export class Task {
 
-  constructor(taskId: number, taskDesc: string, taskDetails: string ){
+  constructor(taskId: string, taskDesc: string, taskDetails: string ){
 
   }
 }
