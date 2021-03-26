@@ -5,7 +5,7 @@
         <th>Task Id</th>
         <th>Task Description</th>
         <th>Task Details</th>
-        <th>Status </th>
+        <th>Update</th>
       </tr>
     </thead>
     <tbody>
@@ -14,18 +14,16 @@
         <td>Clark</td>
         <td>Kent</td>
         <td>
-                  <div class="form-check form-check-inline" style="margin-right: 45px;">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Created</label>
-                  </div>
-                  <div class="form-check form-check-inline" style="margin-right: 45px;">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Work in progress</label>
-                  </div>
-                  <div class="form-check form-check-inline" style="margin-right: 45px;">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                    <label class="form-check-label" for="inlineRadio3">Completed</label>
-                  </div>
+          <div>
+            <!-- <label for="status" style="margin-right: 30px;">Status</label> -->
+            <select name="status" id="status" required>
+              <!-- <option value="created">Status</option> -->
+              <option value="created">Created</option>
+              <option value="wip">Work in Progress</option>
+              <option value="complete">Complete</option>
+              <option value="closed">Closed</option>
+            </select>
+          </div>
         </td>
       </tr>
       <tr>
@@ -33,18 +31,16 @@
         <td>John</td>
         <td>Carter</td>
         <td>
-                  <div class="form-check form-check-inline" style="margin-right: 45px;">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Created</label>
-                  </div>
-                  <div class="form-check form-check-inline" style="margin-right: 45px;">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Work in progress</label>
-                  </div>
-                  <div class="form-check form-check-inline" style="margin-right: 45px;">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                    <label class="form-check-label" for="inlineRadio3">Completed</label>
-                  </div>
+          <div>
+            <!-- <label for="status" style="margin-right: 30px;">Status</label> -->
+            <select name="status" id="status" required>
+              <!-- <option value="created">Status</option> -->
+              <option value="created">Created</option>
+              <option value="wip">Work in Progress</option>
+              <option value="complete">Complete</option>
+              <option value="closed">Closed</option>
+            </select>
+          </div>
         </td>
       </tr>
       <tr>
@@ -52,28 +48,24 @@
         <td>Peter</td>
         <td>Parker</td>
         <td>
-        <div class="form-check form-check-inline" style="margin-right: 45px;">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-          <label class="form-check-label" for="inlineRadio1">Created</label>
-        </div>
-        <div class="form-check form-check-inline" style="margin-right: 45px;">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-          <label class="form-check-label" for="inlineRadio2">Work in progress</label>
-        </div>
-        <div class="form-check form-check-inline" style="margin-right: 45px;">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-          <label class="form-check-label" for="inlineRadio3">Completed</label>
-        </div>
-
+          <div>
+            <!-- <label for="status" style="margin-right: 30px;">Status</label> -->
+            <select name="status" id="status" required>
+              <!-- <option value="created">Status</option> -->
+              <option value="created" id="created">Created</option>
+              <option value="wip" id="wip">Work in Progress</option>
+              <option value="complete" id="complete">Complete</option>
+              <option value="closed" id="closed">Closed</option>
+            </select>
+          </div>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
-<em><strong>
-  <h6>odd numbers counter</h6>
-  <p *ngIf="counter%2 != 0"style="color:sienna">{{ counter }} is an odd number</p>
-</strong></em>
-
-
-
+<em>
+  <strong>
+    <h6>odd numbers counter</h6>
+    <p *ngIf="counter%2 != 0" style="color:sienna">{{ counter }} is an odd number</p>
+  </strong>
+</em>
