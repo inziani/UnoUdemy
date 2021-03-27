@@ -10,6 +10,7 @@
           <th>Task Description</th>
           <th>Task Details</th>
           <th>Update</th>
+          <th>Comments</th>
         </tr>
       </thead>
       <tbody>
@@ -19,14 +20,16 @@
           <td>{{ task.taskDetails}} </td>
           <td>
             <div>
-              <select name="status" id="status" required>
-                <option value="created">Created</option>
+              <select name="status" id="status" required [(ngModel)]="selectedStatus" (change)="changeStatus($event)">
+                <option *ngFor="let status of taskStatus" [ngValue]="status">{{ status }}</option>
+                <!-- <option value="created">Created</option>
                 <option value="wip">Work in Progress</option>
                 <option value="complete">Complete</option>
-                <option value="closed">Closed</option>
+                <option value="closed">Closed</option> -->
               </select>
             </div>
           </td>
+          <td id="taskStatus"> {{ task.taskComments }} </td>
         </tr>
       </tbody>
     </table>

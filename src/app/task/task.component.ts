@@ -1,5 +1,6 @@
 import { THIS_EXPR, ThrowStmt } from '@angular/compiler/src/output/output_ast';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output , EventEmitter } from '@angular/core';
+// import * as EventEmitter from 'node:events';
 import { Task } from '../task/task';
 
 @Component({
@@ -10,6 +11,7 @@ import { Task } from '../task/task';
 export class TaskComponent implements OnInit {
   task = new Task(0, 'React frontend', 'django back end');
   @Input()taskList =  Array()
+  // @Output()updateStatus = new EventEmitter<string>();
 
 
   constructor() {

@@ -7,13 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskDisplayComponent implements OnInit {
 
-  listDisplay = [{taskId: 'taskId', taskDesc: 'taskDesc', taskDetails: 'taskDetails'}];
+  taskStatus = ['Created', 'Work in progress', 'Closed'];
+  selectedStatus = '';
+
+  listDisplay = [{taskId: 'taskId', taskDesc: 'taskDesc', taskDetails: 'taskDetails', taskComments: 'taskComments'}];
 
 
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeStatus(event: any){
+    console.log(event.target.value);
+    this.listDisplay.push(event);
+
+
+
   }
 
 }
