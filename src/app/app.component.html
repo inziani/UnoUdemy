@@ -1,18 +1,22 @@
+
+
 <div class="container">
     <div>
-      <app-game-control></app-game-control>
+      <app-task-display></app-task-display>
     </div>
-  <app-cockpit
-  (serverCreated)="onServerAdded($event)"
-  (bluePrintCreated)="onBluePrintAdded($event)"
-  ></app-cockpit>
+    <div>
+        <app-cockpit (serverCreated)="onServerAdded($event)" (bluePrintCreated)="onBluePrintAdded($event)"></app-cockpit>
+    </div>
   <hr>
-  <div class="row">
-    <div class="col-xs-12">
-      <app-server-element *ngFor="let serverElements of serverElements" [srvElement]='serverElements'></app-server-element>
-    </div>
+  <div>
+      <div class="row">
+        <div class="col-xs-12">
+          <app-server-element *ngFor="let serverElements of serverElements" [srvElement]='serverElements'>
+          </app-server-element>
+        </div>
+      </div>
   </div>
-  <hr>
 
+  <hr>
 </div>
 

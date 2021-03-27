@@ -1,0 +1,35 @@
+
+  <div class="container">
+    <div>
+      <app-task  [taskList]='listDisplay'></app-task>
+    </div>
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>Task Id</th>
+          <th>Task Description</th>
+          <th>Task Details</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of listDisplay">
+          <td>{{ task.taskId }}</td>
+          <td>{{ task.taskDesc }} </td>
+          <td>{{ task.taskDetails}} </td>
+          <td>
+            <div>
+              <select name="status" id="status" required>
+                <option value="created">Created</option>
+                <option value="wip">Work in Progress</option>
+                <option value="complete">Complete</option>
+                <option value="closed">Closed</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+

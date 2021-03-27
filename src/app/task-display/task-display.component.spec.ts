@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EvenComponent } from './even.component';
+import { TaskDisplayComponent } from './task-display.component';
 
-describe('EvenComponent', () => {
-  let component: EvenComponent;
-  let fixture: ComponentFixture<EvenComponent>;
+describe('TaskDisplayComponent', () => {
+  let component: TaskDisplayComponent;
+  let fixture: ComponentFixture<TaskDisplayComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EvenComponent ]
+      declarations: [ TaskDisplayComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EvenComponent);
+    fixture = TestBed.createComponent(TaskDisplayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
