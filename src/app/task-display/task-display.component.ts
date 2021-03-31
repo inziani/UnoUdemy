@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task-display.component.css']
 })
 export class TaskDisplayComponent implements OnInit {
+  color = ''
 
   taskStatus = ['Created', 'Work in progress', 'Closed'];
   selectedStatus = '';
 
-  listDisplay = [{taskId: 'taskId', taskDesc: 'taskDesc', taskDetails: 'taskDetails', taskComments: 'taskComments'}];
+  listDisplay = [{date: 'date', taskId: 'taskId', taskDesc: 'taskDesc', taskDetails: 'taskDetails', taskComments: 'taskComments'}];
 
 
 
@@ -19,11 +20,22 @@ export class TaskDisplayComponent implements OnInit {
   ngOnInit(): void {
   }
 
+   ngOnChanges(){
+
+    //  if (this.taskStatus === 'Created'){
+    //    this.color = 'red';
+    //  }
+    //  else if ( this.taskStatus === 'Work in progress'){
+    //    this.color = 'amber';
+    //  }
+    //  else {
+    //    this.color = 'green';
+    //  }
+  }
+
   changeStatus(event: any){
     console.log(event.target.value);
-    this.listDisplay.push(event);
-
-
+    // this.listDisplay[1].taskComments = this.selectedStatus;
 
   }
 

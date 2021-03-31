@@ -18,4 +18,9 @@
               <button type="submit" class="btn btn-primary" (click)="addTask()"> Add Task</button>
             </div>
           </div>
+          <div class="container">
+            <select name="status" id="statust" [style.background]="color" [(ngModel)]="updatedStatus">Updated Status
+              <option *ngFor="let status of taskStatus" [ngValue]="status">{{ status }}</option>
+            </select>
+          </div>
 
