@@ -3,24 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { CockpitComponent } from './cockpit/cockpit.component';
-import { ServerElementComponent } from './server-element/server-element.component';
-import { TaskComponent } from './task/task.component';
-import { TaskDisplayComponent } from './task-display/task-display.component';
-import { BasicHightlightDirective } from './task-display/basic-highlight/basic-highlight.directive';
-import { BetterHighlightDirective } from './task-display/better-highlight/better-highlight.directive';
-import { UnlessDirective } from './task-display/unless/unless.directive';
+import { HeaderComponent } from './header/header.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CockpitComponent,
-    ServerElementComponent,
-    TaskComponent,
-    TaskDisplayComponent,
-    BasicHightlightDirective,
-    BetterHighlightDirective,
-    UnlessDirective
+    HeaderComponent,
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
+
   ],
   imports: [
     BrowserModule,
