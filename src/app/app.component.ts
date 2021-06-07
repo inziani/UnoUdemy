@@ -6,14 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  loadedFeature = 'recipe;'
 
-  serverElements = [{type: 'server', name: 'TestServer', content: 'Just a test Again..'}];
+onNavigate(feature: string){
+  this.loadedFeature = feature;
 
-  onServerAdded(serverData: {serverName: string, serverContent: string}){
-    this.serverElements.push({type: 'server', name: serverData.serverName, content: serverData.serverContent});
-  }
-
-  onBluePrintAdded(bluePrintData: {serverName: string, serverContent: string}){
-    this.serverElements.push({type: 'blueprint', name: bluePrintData.serverName, content: bluePrintData.serverContent});
-  }
+}
 }
