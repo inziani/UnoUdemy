@@ -12,6 +12,8 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 
 
 
@@ -29,6 +31,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
     HeaderComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
+    CockpitComponent,
+    ServerElementComponent,
 
 
   ],
