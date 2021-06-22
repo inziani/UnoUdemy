@@ -14,6 +14,8 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 
 
@@ -33,6 +35,7 @@ import { ServerElementComponent } from './server-element/server-element.componen
     ShoppingEditComponent,
     CockpitComponent,
     ServerElementComponent,
+    DropdownDirective,
 
 
   ],
@@ -40,7 +43,7 @@ import { ServerElementComponent } from './server-element/server-element.componen
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
