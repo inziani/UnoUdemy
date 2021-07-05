@@ -16,6 +16,9 @@ import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { appRoutingModule } from './app-routing.module';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipesEditComponent } from './recipes/recipes-edit/recipes-edit.component';
 
 
 
@@ -36,14 +39,17 @@ import { DropdownDirective } from './shared/dropdown.directive';
     CockpitComponent,
     ServerElementComponent,
     DropdownDirective,
+    RecipeStartComponent,
+    RecipesEditComponent,
 
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    appRoutingModule
   ],
   providers: [ShoppingListService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
